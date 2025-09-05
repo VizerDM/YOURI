@@ -1,5 +1,13 @@
-function App() {
-  return <div>App</div>;
+//Components
+import ProductCard from "./Components/ProductCard";
+
+//Main Function
+function HomePage() {
+  return (
+    <>
+      <ProductCard Title="Latest Products" />
+    </>
+  );
 }
 
-export default App;
+export default HomePage;
