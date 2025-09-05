@@ -6,7 +6,12 @@ import JacketMock from "./assets/JacketMockUp.jpeg";
 function HomePage() {
   return (
     <>
-      <ProductCard Title="Latest Products" Image={JacketMock} />
+      <ProductCard
+        Title="Latest Products"
+        Image={JacketMock}
+        Price={25}
+        Rating={4}
+      />
     </>
   );
 }
