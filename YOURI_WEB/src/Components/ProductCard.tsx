@@ -13,7 +13,7 @@ function ProductCard({ Title, Image, Rating, Price }: Props) {
         <img src={Image} alt="an image"></img>
         <h3>${Price}</h3>
         <br></br>
-        <h3>Rating: {Rating} stars</h3>
+        <h3>{"⭐".repeat(Rating)} </h3>
       </div>
     </>
   );
