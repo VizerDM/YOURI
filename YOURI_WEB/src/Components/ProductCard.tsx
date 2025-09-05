@@ -10,9 +10,9 @@ function ProductCard({ Title, Image, Rating, Price }: Props) {
     <>
       <div className="ProductCard">
         <h1>{Title}</h1>
-        <img src={Image} alt="an image"></img>
+        <img src={Image} alt="an image" width={200}></img>
         <h3>${Price}</h3>
-        <br></br>
+
         <h3>{"⭐".repeat(Rating)} </h3>
       </div>
     </>
