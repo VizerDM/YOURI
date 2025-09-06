@@ -1,0 +1,7 @@
+.product-slider{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    align-content: center;
+
+}
