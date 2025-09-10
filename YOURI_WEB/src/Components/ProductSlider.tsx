@@ -1,7 +1,9 @@
 //Imports  --- Imgs
-import JacketImg from "../assets/JacketMockUp.jpeg";
-import HoodieImg from "../assets/HoodieMockUp.jpg";
-import TshirtImg from "../assets/TshirtMockUp.jpeg";
+import TshirtImg from "../assets/TshirtMockUp.png";
+import JeanImg from "../assets/Jean.png";
+import ShirtImg from "../assets/Shirt.png";
+import GraphTshirtImg from "../assets/GraphicTshirt.png";
+
 //Imports --- Comps
 import ProductCard from "./ProductCard";
 
@@ -11,24 +13,33 @@ import "./Productslider.css";
 function ProductSlider() {
   const Products = [
     {
-      Title: "Jacket",
-      Image: JacketImg,
-      Price: 40,
-      Rating: 4,
+      Title: "Shirt",
+      Image: ShirtImg,
+      Price: 150,
+      Rating: 3,
     },
     {
-      Title: "Hoodie",
-      Image: HoodieImg,
-      Price: 60,
+      Title: "Graphic T-Shirt",
+      Image: GraphTshirtImg,
+      Price: 169.99,
       Rating: 5,
     },
     {
-      Title: "Tshirt",
+      Title: "Jean",
+      Image: JeanImg,
+      Price: 120,
+      Rating: 3,
+    },
+    {
+      Title: "T-shirt",
       Image: TshirtImg,
       Price: 60,
-      Rating: 5,
+      Rating: 4,
     },
   ];
+  const onClickHandler = () => {
+    console.log("Welcome to the Product Page");
+  };
   return (
     <>
       <div className="product-slider">
@@ -40,6 +51,7 @@ function ProductSlider() {
               Image={Product.Image}
               Price={Product.Price}
               Rating={Product.Rating}
+              onClick={onClickHandler}
             />
           );
         })}
