@@ -1,7 +1,13 @@
-.product-slider{
+.main-product-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+.sub-product-slider{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items:center;
     align-content: center;
-
 }

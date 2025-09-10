@@ -1,3 +1,6 @@
+//Imports --- Misc
+import "./RedirectButton.css";
+
 interface Props {
   Title: string;
   onClick: () => void;
