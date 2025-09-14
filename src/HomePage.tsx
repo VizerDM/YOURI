@@ -1,12 +1,16 @@
-//Components
-import ProductSlider from "./Components/ProductSlider";
+import "./HomePage.css";
+import Navbar from "./components/NavBarFolder/Navbar";
+import { BrowserRouter as Router , Routes , Route } from "react-router-dom";
 
-//Main Function
 function HomePage() {
   return (
-    <>
-      <ProductSlider />
-    </>
+   
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navbar />}></Route>
+      </Routes>
+    </Router>
+
   );
 }
 

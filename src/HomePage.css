@@ -1,0 +1,154 @@
+
+/*lien externe pour la police */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+/* variable globale de couleur */
+:root{
+    --bg : #f5f3f3;
+    --accent:#111;
+    --muted:#7d7d7d;
+    --card:#fff;
+}
+
+/* desing globale pour la page */
+*{
+    box-sizing: border-box;
+    html,body,#root{height: 100%;}
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg);
+    color: #111;
+   
+}
+
+
+/*  NavBar css  */
+
+
+/* toute la bar de nav*/
+.nav{
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.nav-inner{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    align-items: baseline;
+    gap: 10px ;
+}
+
+/* le logo */
+.logo{
+    font-weight: 1000;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #111;
+}
+
+/* les links */
+.nav-links{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.link{
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.link:hover{
+    color: #757575;
+}
+
+.link::after{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #757575;
+    transition: width 0.3s ease;
+}
+
+.link:hover::after{
+    width: 100%;
+}
+
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 22px;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.3s forwards;
+    min-width: 150px;
+    z-index: 1000;
+}
+.dropdown-menu a {
+    padding: 8px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+    }
+.dropdown-menu a:hover {
+    background: #f5f5f5;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* search input */
+.search-cart{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    padding: 8px 12px;
+    border-radius: 20px;
+    border : 1px solid #ddd;
+    width: 400px ;
+    max-width: 40vw;
+}
+
+/* les incons */
+.icon-btn{
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+    gap: 15px;
+}
+.icon-btn img{
+    width: 18px;
+    height: 18px;
+}
+
+
+
