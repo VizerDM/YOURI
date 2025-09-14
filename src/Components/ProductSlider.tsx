@@ -10,6 +10,7 @@ import ProductCard from "./ProductCard";
 //Imports --- Misc
 import "./Productslider.css";
 import RedirectButton from "./RedirectButton";
+import { Link } from "react-router-dom";
 
 function ProductSlider() {
   const Products = [
@@ -18,24 +19,28 @@ function ProductSlider() {
       Image: ShirtImg,
       Price: 150,
       Rating: 3,
+      id: 1,
     },
     {
       Title: "Graphic T-Shirt",
       Image: GraphTshirtImg,
       Price: 169.99,
       Rating: 5,
+      id: 2,
     },
     {
       Title: "Jean",
       Image: JeanImg,
       Price: 120,
       Rating: 3,
+      id: 3,
     },
     {
       Title: "T-shirt",
       Image: TshirtImg,
       Price: 60,
       Rating: 4,
+      id: 4,
     },
   ];
   const onClickHandler1 = () => {
@@ -50,7 +55,11 @@ function ProductSlider() {
         <div className="sub-product-slider">
           {Products.map((Product) => {
             return (
-              <>
+              <Link
+                key={Product.id}
+                to={`/product/${Product.id}`}
+                className="product-id"
+              >
                 <ProductCard
                   key={Product.Title}
                   Title={Product.Title}
@@ -59,7 +68,7 @@ function ProductSlider() {
                   Rating={Product.Rating}
                   onClick={onClickHandler1}
                 />
-              </>
+              </Link>
             );
           })}
         </div>

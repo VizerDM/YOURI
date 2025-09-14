@@ -1,7 +1,10 @@
 body{
     margin: 0;
 }
-
+.product-card *{
+    text-decoration: none;
+    color: black;
+}
 .product-card{
     margin: 10px 10px;
     font-family: "Montserrat", sans-serif ;
@@ -12,6 +15,7 @@ body{
     justify-content: baseline;
     align-items: center;
     flex-direction: column;
+    color: black;
 }
 .product-card #title{
     font-size: 1.2rem;
