@@ -10,7 +10,7 @@ function HomePage() {
       <Router>
         <Routes>
           <Route path="/" element={<ProductSlider />}></Route>
-          <Route path="/Product" element={<ProductPage />}></Route>
+          <Route path="/Product/:id" element={<ProductPage />}></Route>
         </Routes>
       </Router>
     </>
