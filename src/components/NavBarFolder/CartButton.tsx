@@ -1,10 +1,11 @@
 import CartIcon from "../../assets/NavBarImages/shopping-cart.png";
+import {Link} from "react-router-dom";
 
 function CartButton(){
     return(
-        <button className="icon-btn" aria-label="cart">
+        <Link to="/Cart" className="icon-btn" aria-label="cart">
             <img src={CartIcon} alt="shop-cart" />
-        </button>
+        </Link>
     );
 }
 

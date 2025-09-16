@@ -1,10 +1,11 @@
 import UserIcon from "../../assets/NavBarImages/circle-user.png";
+import {Link} from "react-router-dom";
 
 function AccountButton(){
     return(
-        <button className="icon-btn" aria-label="cart">
+        <Link to="/Profile"className="icon-btn" aria-label="cart">
             <img src={UserIcon} alt="setting icon" />
-        </button>
+        </Link>
     );
 }
 export default AccountButton;
