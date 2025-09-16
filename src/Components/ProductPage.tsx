@@ -35,7 +35,7 @@ function ProductPage() {
   return (
     <>
       <h3>
-        {product?.Title}, {product?.Price} $, {product?.id}
+        {product?.Title}, {product?.Price} $, #{product?.id}
       </h3>
       <h4>{"⭐".repeat(Number(rating))} </h4>
     </>
